@@ -793,4 +793,13 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelector
+document.querySelectorAll('.bio-grid, .vision-section .inner').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(24px)';
+  el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
