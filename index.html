@@ -71,6 +71,13 @@
   "offers": [
     {
       "@type": "Offer",
+      "name": "Individual Seat",
+      "price": "600",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/LimitedAvailability"
+    },
+    {
+      "@type": "Offer",
       "name": "Upper Level Championship Table (Table of Four)",
       "price": "2500",
       "priceCurrency": "USD",
@@ -2144,6 +2151,22 @@ body::after {
       <a href="#rsvp" class="btn-gold" style="text-align:center; display:block;">Reserve Premier Table</a>
     </div>
   </div>
+
+  <!-- INDIVIDUAL SEAT -->
+  <div style="max-width: 1200px; margin: 2.5rem auto 0; position: relative; z-index: 1;">
+    <div class="gold-frame" style="border: 1px solid rgba(201, 168, 76, 0.25); padding: 2rem 3rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; background: rgba(201, 168, 76, 0.02);">
+      <div>
+        <div style="font-family: var(--font-body); font-size: 0.8rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); font-weight: 500;">Upper Level</div>
+        <div style="font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: 0.06em; margin-top: 0.25rem;" class="gold-text">INDIVIDUAL SEAT</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 300; color: var(--gold-light);">$600</div>
+        <div style="font-family: var(--font-serif); font-size: 1rem; font-style: italic; color: var(--cream-dim);">Per Person</div>
+      </div>
+      <div style="font-size: 0.95rem; font-weight: 300; color: var(--cream-dim); max-width: 320px; line-height: 1.6;">VIP access, swag bag, food &amp; snack voucher, unlimited non-alcoholic beverages, and weigh-in access.</div>
+      <a href="#rsvp" class="btn-outline" style="white-space: nowrap;">Reserve Seat</a>
+    </div>
+  </div>
 </section>
 
 <!-- ===================== OUR BOXERS ===================== -->
@@ -2258,7 +2281,7 @@ body::after {
       <a href="mailto:ardian@cukaboxing.com?subject=Legacy%20of%20Nations%20VIP%20Reservation" class="btn-gold">RSVP via Email</a>
     </div>
     <p style="font-style: normal; font-size: 1.15rem; color: var(--cream-dim);">
-      RSVP by March 26, 2026 &mdash; ardian@cukaboxing.com &mdash; (801) 916-3630
+      To RSVP, email ardian@cukaboxing.com or call (801) 916-3630
     </p>
     <div style="margin-top: 1.5rem;">
       <a href="#" id="zelle-toggle" onclick="event.preventDefault(); document.getElementById('zelle-info').classList.toggle('zelle-open'); this.textContent = document.getElementById('zelle-info').classList.contains('zelle-open') ? 'Hide Payment Details' : 'Already Reserved? Pay Here';" class="btn-outline" style="margin-top: 0.5rem;">Already Reserved? Pay Here</a>
@@ -2274,7 +2297,7 @@ body::after {
             <a href="https://venmo.com/u/Ardian-Cuka" target="_blank" style="font-family: var(--font-body); font-size: 1.1rem; color: var(--gold); border-bottom: 1px solid rgba(201, 168, 76, 0.3);">@Ardian-Cuka</a>
           </div>
         </div>
-        <div style="margin-top: 1rem; font-size: 0.9rem; color: var(--cream-dim); font-weight: 300; line-height: 1.6; text-align: center;">Please include your full name and table preference<br>(Championship or Ringside) in the payment memo.</div>
+        <div style="margin-top: 1rem; font-size: 0.9rem; color: var(--cream-dim); font-weight: 300; line-height: 1.6; text-align: center;">Please include your full name and seating preference<br>(Single Seat, Championship Table, or Ringside Table) in the payment memo.</div>
       </div>
     </div>
   </div>
@@ -2396,21 +2419,4 @@ setInterval(updateCountdown, 1000);
 
 // Fade-in on scroll
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.bout, .vip-card, .roster-card, .news-card, .gallery-item').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
-  observer.observe(el);
-});
-</script>
-
-</body>
-</html>
+  entries.forEach(en
